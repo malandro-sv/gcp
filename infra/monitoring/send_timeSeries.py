@@ -2,7 +2,7 @@
 import sys, time, random
 from datetime import datetime
 from google.cloud import monitoring_v3
-project_name = f"projects/manuelafg-dev922"
+project_name = f"projects/PROJECT_ID"
 
 def create_metric_series():
     """ metric descriptor full name:
