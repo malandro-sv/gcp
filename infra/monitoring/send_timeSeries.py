@@ -14,8 +14,8 @@ def create_metric_series():
             series = monitoring_v3.TimeSeries()
             series.metric.type = f"custom.googleapis.com/{sys.argv[1]}"
             series.resource.type = "gce_instance"
-            series.resource.labels["instance_id"] = "4210820334175363608"
-            series.resource.labels["zone"] = "us-central1-a"
+            series.resource.labels["instance_id"] = INSTANCE_ID
+            series.resource.labels["zone"] = ZONE
             distro = series.metric.labels[sys.argv[2]] = sys.argv[3]
             #kernel = series.metric.labels["kernel"] = sys.argv[2]
 
