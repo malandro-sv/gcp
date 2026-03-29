@@ -6,8 +6,8 @@ from google.cloud import monitoring_v3
 from google.api_core import exceptions
 
 client = monitoring_v3.MetricServiceClient()
-project_name = f"projects/manuelafg-dev922"
-metric =  {"name": "projects/manuelafg-dev922",
+project_name = f"projects/PROJECT_ID"
+metric =  {"name": "projects/PROJECT_ID",
            "type": f"custom.googleapis.com/{sys.argv[1]}",
            "labels": [
                { "key": sys.argv[2],
